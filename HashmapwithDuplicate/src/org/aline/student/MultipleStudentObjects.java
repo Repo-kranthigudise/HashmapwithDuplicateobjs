@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 public class MultipleStudentObjects {
 	public static void main(String[] args) {
+		int count = 0;
 
 		HashMap<Integer, Student> stdhashmap = new HashMap<>();
 
@@ -25,10 +26,14 @@ public class MultipleStudentObjects {
 		stdhashmap.put(9, s7);
 
 		for (Student studentMap : stdhashmap.values()) {
-			System.out.println(studentMap);
-
+			if (studentMap.getName().equals("kranthi")) {
+				count++;
+				System.out.println(stdhashmap);
+			}
+			
 		}
-
+		System.out.println();
+		System.out.println("No of dupliate Student object are:" + count);
 	}
 
 }
